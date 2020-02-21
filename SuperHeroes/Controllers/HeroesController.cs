@@ -106,6 +106,7 @@ namespace SuperHeroes.Controllers
             {
                 // TODO: Add delete logic here
                 _context.Heroes.Remove(hero);
+                _context.SaveChanges();
                 
                 return RedirectToAction(nameof(Index));
             }
